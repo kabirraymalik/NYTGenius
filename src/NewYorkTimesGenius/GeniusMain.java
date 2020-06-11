@@ -28,7 +28,7 @@ public class GeniusMain extends Application {
 
         try
         {
-            FileInputStream fstream_school = new FileInputStream("/Users/kabirraymalik/Personal_Coding/NewYorkTimesGenius/src/NewYorkTimesGenius/dictionaryforgenius.txt");
+            FileInputStream fstream_school = new FileInputStream("src/NewYorkTimesGenius/dictionaryforgenius.txt");
             DataInputStream data_input = new DataInputStream(fstream_school);
             BufferedReader buffer = new BufferedReader(new InputStreamReader(data_input));
             String str_line;
