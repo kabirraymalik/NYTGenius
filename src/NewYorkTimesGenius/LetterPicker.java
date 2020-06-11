@@ -663,17 +663,26 @@ public class LetterPicker extends AnchorPane {
         int o = 0;
         int a = 0;
         int z = 1;
+        int test = 1;
+        int test2 = 1;
+        int test3 = 1;
         for(int i = 0; i< alphabet.length; i++){
+            System.err.println("test: "+test);
+            test++;
             if(!alphabet[i].equals(GeniusMain.letter1) && !alphabet[i].equals(GeniusMain.letter2) &&!alphabet[i].equals(GeniusMain.letter3)&&!alphabet[i].equals(GeniusMain.letter4)&&!alphabet[i].equals(GeniusMain.letter5)&&!alphabet[i].equals(GeniusMain.letter6)&&!alphabet[i].equals(GeniusMain.letter7)){
                 updatedAlphabet[o] = alphabet[i];
+                System.err.println("test2: "+test2);
+                test2++;
                 o++;
             }
 
         }
         for(int i = 0; i<GeniusMain.wordlist.length; i++){
+            System.err.println("test3: "+test3);
+            test3++;
             if (GeniusMain.wordlist[i].contains(GeniusMain.letter1)){
-                for (String s : updatedAlphabet) {
-                    if (!GeniusMain.wordlist[i].contains(s)) {
+                for (int y = 0; y<updatedAlphabet.length; y++) {
+                    if (!GeniusMain.wordlist[i].contains(updatedAlphabet[y])) {
                         a++;
                     }
                 }
@@ -684,5 +693,6 @@ public class LetterPicker extends AnchorPane {
                 }
             }
         }
+
     }
 }
